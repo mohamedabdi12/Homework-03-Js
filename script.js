@@ -28,6 +28,29 @@ var passwordLength = parseInt(userInput)
 
   var specialCharacters = confirm("Do you want special characters in your password?");
 
+   // This confirms the user has inputs or will reload the page if null
+  
+   if ((lowerCases === false) && (upperCases === false) && (numbers === false) && (specialCharacters === false)) {
+    alert('You must choose at least 1 item to include. For better security, choose minimum of 3 items!');
+    location.reload();
+  }
+
+
+    // This confirms the user has input correct range for password length
+
+    var userInput = prompt('How long would you like your password to be? (8-128 characters please)');
+    var passwordLength = parseInt(userInput);
+    if (passwordLength < 8) {
+      alert('Password must have at least 8 characters!');
+      location.reload();
+    } else if (passwordLength > 128) {
+      alert('Password must have at less than 128 characters!');
+      location.reload();
+    } else if (passwordLength === null) {
+      alert('Password must have at least 8 characters!');
+      location.reload();
+    }
+
 
   // Generator functions using the Chartcode
 
@@ -86,5 +109,7 @@ let password = "";
    }
       return randomPasswordGenerated;
 }
+
+
 
 
