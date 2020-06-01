@@ -18,8 +18,8 @@ generateButton.addEventListener("click", writePassword);
 
 // Prompts that come up after you click generate password
 function generatePassword() {
-  var userInput = prompt("Please enter the number of characters you want for you new password.  It must be more than 8 but less than 128.");
-var passwordLength = parseInt(userInput)
+//   var userInput = prompt("Please enter the number of characters you want for you new password.  It must be more than 8 but less than 128.");
+// var passwordLength = parseInt(userInput)
   var numbers = confirm("Do you want numbers in your password?");
 
   var lowerCases = confirm("Do you want lowercases in your password?");
